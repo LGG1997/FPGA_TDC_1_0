@@ -4,6 +4,6 @@ The copyright is belong to Jiajun Lu (gf20645@bristol.ac.uk) and Zijie Wang (sv2
 
 The students of university of Bristol.
 
-Date 2022/04/28.
+Date: 28/04/2022.
 
 The detail of TDC refers to "TDC Instruction.doc"
