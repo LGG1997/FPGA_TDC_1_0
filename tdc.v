@@ -30,20 +30,21 @@ module tdc(
 	output [15:0] o_dout
 );
 
-
 wire sys_clk;
 wire pulse;  
 wire stop;
-(*mark_debug = "true"*) wire [15:0] dout;
+wire [15:0] dout;
 
+//(*mark_debug = "true"*) wire [15:0] dout;
 
-//ila_0 ila_0_inst
-//	(
-//		.clk(sys_clk),
-//		.probe0(dout)
-//	);
+/*
+ila_0 ila_0_inst (
+    .clk(sys_clk),
+    .probe0(dout)
+);
+*/
 
-crg crg_inst(
+crg U_CRG_INST(
 	.i_clk(i_clk),
 	.i_reset(i_reset),
 	.i_control(i_control),
@@ -53,26 +54,22 @@ crg crg_inst(
 );
 
 //---------------------------------------------------------------------------------------------
-
-
 // TDC fine counting component
-tdc_fine  
-	#(	
-		.NUM_DSP(12),
-		.NUM_CARRY(144),
-		.DATA_WIDTH(8)
-	 )
-	fine_inst
-	 (
-    	.clk(sys_clk),
-    	.rst(i_reset),
-    	.stop(stop),
-    	.cali_en(0),
-    	.trigger(pulse),
- 		.dout(dout)
-    );
+tdc_fine #(	
+    .NUM_DSP_PER_LINE(16),
+    .NUM_DELAY_LINE(8),
+    .DATA_WIDTH(8)
+) U_TDC_FINE_INST (
+    .i_clk(sys_clk),
+    .i_rst(i_reset),
+    .i_stop(stop),
+    .i_cali_en(0),
+    .i_trigger(pulse),
+    .o_dout(dout)
+);
 
 // TDC coarse counting component
 assign o_dout = dout[15:0];
 
 endmodule
+
