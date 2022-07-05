@@ -20,6 +20,6 @@
 //////////////////////////////////////////////////////////////////////////////////
 //`define WAVE_UNION
 //`define CHARRY_CHAIN
-`define DSP_CHAIN
+//`define DSP_CHAIN
 //`define PRIORITY_ENCODER
 `define MULTIEDGE_ENCODER
