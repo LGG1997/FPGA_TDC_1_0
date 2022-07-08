@@ -45,14 +45,14 @@ wire [15:0]                             tmp_enc_dout_ff    [NUM_DELAY_LINE * NUM
 // Wave Union Launcher
 // ====================================================================================================
 `ifdef WAVE_UNION
-	wave_union #(
-        .NUM(16)
+    wave_union #(
+        .NUM_CARRY4(4)
     ) wave_union_inst(
         .i_trigger(i_trigger),
         .o_dout(trigger_out)
     );
     assign lut_buff[0] = trigger_out;
-`elsif
+`else
     assign lut_buff[0] = i_trigger;
 `endif
 
