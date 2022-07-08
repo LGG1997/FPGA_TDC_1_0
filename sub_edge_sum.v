@@ -40,9 +40,4 @@ always @(posedge clk or posedge rst) begin
 	end
 end
 
-/*
-assign sum_position_tmp = din[0]*1 + din[1]*2 + din[2]*3 + din[3]*4 + din[4]*5 + din[5]*6;
-assign sum_position_tmp = din[0] + din[1] + din[2] + din[3] + din[4] + din[5];
-*/
-
 endmodule
