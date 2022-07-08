@@ -87,17 +87,17 @@ reg [10:0] tmp_out;
 genvar iblk;
 generate 
 	for(iblk = 0; iblk < NUM_ENC; iblk = iblk + 1) begin
-			_48_6_encoder #(
-				.INDEX(iblk)		 	
-	 		 )U_48_6_ENCODER_INST (
-                .i_clk(i_clk),
-                .i_rst(i_rst),
-                .i_en(1'b1),
-                .i_din(tmp_data[((iblk+1)*48 - 1) : (iblk*48)]),
-                .o_dout(tmp_ecdr_out[iblk]),
-                .o_offset(tmp_offset[iblk]),	
-                .o_Yen(tmp_yen[iblk]),
-                .o_Ynem(tmp_ynem[iblk])
+		_48_6_encoder #(
+			.INDEX(iblk)		 	
+	 	)U_48_6_ENCODER_INST (
+			.i_clk(i_clk),
+			.i_rst(i_rst),
+			.i_en(1'b1),
+			.i_din(tmp_data[((iblk+1)*48 - 1) : (iblk*48)]),
+			.o_dout(tmp_ecdr_out[iblk]),
+			.o_offset(tmp_offset[iblk]),	
+			.o_Yen(tmp_yen[iblk]),
+			.o_Ynem(tmp_ynem[iblk])
     		 );
 	end
 endgenerate
