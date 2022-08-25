@@ -121,7 +121,7 @@ always @(posedge i_clk or posedge i_rst) begin
 			tmp_out <= tmp_offset[14] + tmp_ecdr_out[14]; 
 		else if(tmp_ynem[13])  
 			tmp_out <= tmp_offset[13] + tmp_ecdr_out[13]; 
-	    else if(tmp_ynem[12]) 
+	        else if(tmp_ynem[12]) 
 			tmp_out <= tmp_offset[12] + tmp_ecdr_out[12]; 
 		else if(tmp_ynem[11]) 
 			tmp_out <= tmp_offset[11] + tmp_ecdr_out[11]; 
