@@ -118,15 +118,15 @@ always @(posedge i_clk or posedge i_rst) begin
 		if(tmp_ynem[15]) 
 		   tmp_out <= tmp_offset[15] + tmp_ecdr_out[15];	   
 		else if(tmp_ynem[14])
-			tmp_out <= tmp_offset[14] + tmp_ecdr_out[14]; 
+		   tmp_out <= tmp_offset[14] + tmp_ecdr_out[14]; 
 		else if(tmp_ynem[13])  
-			tmp_out <= tmp_offset[13] + tmp_ecdr_out[13]; 
+		   tmp_out <= tmp_offset[13] + tmp_ecdr_out[13]; 
 	        else if(tmp_ynem[12]) 
-			tmp_out <= tmp_offset[12] + tmp_ecdr_out[12]; 
+		   tmp_out <= tmp_offset[12] + tmp_ecdr_out[12]; 
 		else if(tmp_ynem[11]) 
-			tmp_out <= tmp_offset[11] + tmp_ecdr_out[11]; 
+		   tmp_out <= tmp_offset[11] + tmp_ecdr_out[11]; 
 		else if(tmp_ynem[10]) 
-			tmp_out <= tmp_offset[10] + tmp_ecdr_out[10]; 
+	           tmp_out <= tmp_offset[10] + tmp_ecdr_out[10]; 
 		else if(tmp_ynem[9]) 
 		   tmp_out <= tmp_offset[9] + tmp_ecdr_out[9]; 
 		else if(tmp_ynem[8]) 
@@ -136,7 +136,7 @@ always @(posedge i_clk or posedge i_rst) begin
 		else if(tmp_ynem[6]) 
 		   tmp_out <= tmp_offset[6] + tmp_ecdr_out[6]; 	   
 		else if(tmp_ynem[5]) 
-			tmp_out <= tmp_offset[5] + tmp_ecdr_out[5]; 
+		   tmp_out <= tmp_offset[5] + tmp_ecdr_out[5]; 
 		else if(tmp_ynem[4]) 
 		   tmp_out <= tmp_offset[4] + tmp_ecdr_out[4]; 
 		else if(tmp_ynem[3]) 
